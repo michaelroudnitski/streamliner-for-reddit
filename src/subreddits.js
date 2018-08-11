@@ -1,4 +1,4 @@
-module.exports = {
-  "soccer": "soccerstreams",
-  "hockey": "NHLstreams"
-}
+module.exports = [
+  "soccerstreams",
+  "NHLstreams"
+]
