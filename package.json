@@ -1,0 +1,15 @@
+{
+  "name": "streamliner-for-reddit",
+  "version": "1.0.0",
+  "description": "streamliner for reddit is designed to skip the hastle of going through comments on streaming subreddits",
+  "main": "streamliner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Roudnitski",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "request": "^2.88.0"
+  }
+}
