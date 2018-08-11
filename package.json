@@ -2,14 +2,19 @@
   "name": "streamliner-for-reddit",
   "version": "1.0.0",
   "description": "streamliner for reddit is designed to skip the hastle of going through comments on streaming subreddits",
-  "main": "streamliner.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch"
   },
   "author": "Michael Roudnitski",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.10",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
