@@ -11,6 +11,7 @@ function getThread(url) {
 
 function getComments(e) {
   if (!_.endsWith(e.url, '.json?sort=best')) { // this if statement prevents an infinite loop of get requests
+    if (e.tabId != -1) chrome.pageAction.show(e.tabId)
     const subreddit = getSubreddit(e.url);
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -25,7 +26,7 @@ function getComments(e) {
               for (var end = start; comment.data.body[end] != ')' && comment.data.body[end] != ' '; ++end) { }
               const stream_url = comment.data.body.substring(start, end);
               chrome.tabs.create({ url: stream_url });
-              return false; // break lodash's foreach loop earlys
+              return false; // break lodash's foreach loop early
             }
           })
         } catch (err) { }
