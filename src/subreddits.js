@@ -1,4 +1,6 @@
 module.exports = [
   "soccerstreams",
-  "NHLstreams"
+  "NHLStreams",
+  "nbastreams",
+  "nflstreams"
 ]
