@@ -22,7 +22,7 @@ export default function getGames(e) {
             if (thread.data.title[0] == '[' && thread.data.title[3] == ':') {
               console.log("we've got a game on our hands");
               games.push({
-                league: thread.data.selftext,
+                league: thread.data.link_flair_text,
                 title: parseTitle(thread.data.title),
                 url: thread.data.url
               })

@@ -32,12 +32,12 @@ export default function getComments(e) {
           _.forEach(comments, (comment) => {
             // loop through the comment starting from the 'http' substring and find where reddit closes the href using ')' or ' '
             // var end will be accessible to the outer scope and will be the index of ')' or ' '
-            const start = comment.data.body.indexOf('https'); // only accept https
+            const start = comment.data.body.indexOf('http');
             if (start != -1 && checkExclusions(comment.data.body)) {
               for (var end = start; comment.data.body[end] != ')' && comment.data.body[end] != ' '; ++end) { }
               const stream_url = comment.data.body.substring(start, end);
               chrome.tabs.create({ url: stream_url });
-              return false; // break lodash's foreach loop early
+              return false; // break loop
             }
           })
         } catch (err) { }
